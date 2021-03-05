@@ -10,11 +10,11 @@ welcomeText.addEventListener('click', () => {
 let showMoreButton = document.getElementById('showmore');
 let secondContentDiv = document.getElementById('secondContent');
 showMoreButton.addEventListener('click', () => {
-  if (secondContentDiv.style.display == "none") {
+  if (secondContentDiv.style.display === "none") {
     showMoreButton.textContent = "Show More";
-    secondContentDiv.style.display = "block";
-    } else {
-        toggleList.textContent = "Show List";
-        listDiv.style.display = "none";
-      }
+    secondContentDiv.style.display = "none";
+} else {
+    secondContentDiv.style.display === "none";
+    showMoreButton.textContent = "Show Less";
+  }
   });
