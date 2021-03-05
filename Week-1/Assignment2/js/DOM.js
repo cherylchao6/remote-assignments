@@ -1,9 +1,9 @@
 //讓 Welcome 變成 Have a Good time!
-let greeting = "Have a Good time!";
-let welcomeText = document.getElementById('welcomeText');
 
+let welcomeText = document.getElementById('welcomeText');
+;
 welcomeText.addEventListener('click', () => {
-  welcomeText.textContent = greeting;
+  welcomeText.textContent = "Have a good time!";
  });
 
  //Show更多column
