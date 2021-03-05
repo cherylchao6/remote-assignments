@@ -1,5 +1,3 @@
-
-
 let welcomeText = document.getElementById('welcomeText');
 
 //讓 Welcome 變成 Have a Good time!
