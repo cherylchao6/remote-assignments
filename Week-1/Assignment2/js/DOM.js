@@ -13,7 +13,7 @@ welcomeText.addEventListener('click', () => {
      showMoreButton.textContent = "Show More";
      secondContentDiv.style.display = "none";
    } else {
-     secondContentDiv.style.display === "none";
+     secondContentDiv.style.display === "block";
      showMoreButton.textContent = "Show Less";
    }
  });

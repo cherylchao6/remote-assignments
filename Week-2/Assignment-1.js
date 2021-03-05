@@ -1,12 +1,25 @@
 function max(input) {
-
-
+    let output = input[0];
+    for (let i=0; i < input.length; i++) {
+            if (input[i] > output) {
+                output = input[i];
+            }
+        }
+    return output;
 }
 
-var numbers = [4, 2, 5, 1, 3];
-numbers.sort(function(a, b) {
-  return a - b;
-});
-console.log(numbers);
+console.log( max([5, 2, 7, 1, 6]) );
 
-// [1, 2, 3, 4, 5]
+
+// function findPosition(array, target) {
+//   var position = -1;
+//   for (var i = 0; i <array.length; i++) {
+//     if (array[i] == target) {
+//         position = i;
+//         break
+//     }
+//   }
+//   return position;
+// }
+//
+// console.log( findPosition([5, 2, 7, 7, 7, 1, 6], 7) );
