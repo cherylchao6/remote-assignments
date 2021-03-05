@@ -1,4 +1,6 @@
 let welcomeText = document.getElementById('welcomeText');
+let showMoreButton = document.getElementById('showmore');
+let secondContentDiv = document.getElementById('secondContent');
 
 //讓 Welcome 變成 Have a Good time!
 welcomeText.addEventListener('click', () => {
@@ -7,8 +9,6 @@ welcomeText.addEventListener('click', () => {
 
  //Show更多column
  showMoreButton.addEventListener('click', () => {
-   let showMoreButton = document.getElementById('showmore');
-   let secondContentDiv = document.getElementById('secondContent');
    if (secondContentDiv.style.display === "none") {
      showMoreButton.textContent = "Show More";
      secondContentDiv.style.display = "none";
