@@ -111,6 +111,11 @@ button {
 	margin-bottom: 0;
 }
 
+#secondContent {
+	display: none;
+}
+
+
 /* =================================
   Media Queries
 ==================================== */
