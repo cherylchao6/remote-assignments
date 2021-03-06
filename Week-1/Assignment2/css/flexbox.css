@@ -4,14 +4,15 @@
 
 @media (min-width: 769px) {
   .main-header,
-  .main-nav {
+  .main-nav, {
   display: flex;
   justify-content:space-between;
 }
 
   .Content,
   .col-line1,
-  .col-line2, {
+  .col-line2,
+  .button {
     display: flex;
   }
   .col-line1,
@@ -27,7 +28,14 @@
   .col {
     flex:1 100px;
   }
+  .button {
+    align-items: center;
+  }
 @media (min-width: 1025px) {
-
+    .main-header,
+    .Content {
+        width: 100%;
+        max-width: 1200px;
+    }
 
 }

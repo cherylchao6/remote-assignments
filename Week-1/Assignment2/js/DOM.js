@@ -9,11 +9,11 @@ welcomeText.addEventListener('click', () => {
 
  //Show更多column
  showMoreButton.addEventListener('click', () => {
-   if (secondContentDiv.style.display === "none") {
+   if (secondContentDiv.style.display == "none") {
      showMoreButton.textContent = "Show More";
-     secondContentDiv.style.display = "none";
+     secondContentDiv.style.display = "block";
    } else {
-     secondContentDiv.style.display === "block";
      showMoreButton.textContent = "Show Less";
+     secondContentDiv.style.display = "none";
    }
  });
