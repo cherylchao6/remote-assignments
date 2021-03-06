@@ -10,10 +10,10 @@ welcomeText.addEventListener('click', () => {
  //Show更多column
  showMoreButton.addEventListener('click', () => {
    if (secondContentDiv.style.display == "none") {
-     showMoreButton.textContent = "Show More";
+     showMoreButton.textContent = "Show Less";
      secondContentDiv.style.display = "block";
    } else {
-     showMoreButton.textContent = "Show Less";
+     showMoreButton.textContent = "Show More";
      secondContentDiv.style.display = "none";
    }
  });
