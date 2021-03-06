@@ -11,15 +11,15 @@ function max(input) {
 console.log( max([5, 2, 7, 1, 6]) );
 
 
-// function findPosition(array, target) {
-//   var position = -1;
-//   for (var i = 0; i <array.length; i++) {
-//     if (array[i] == target) {
-//         position = i;
-//         break
-//     }
-//   }
-//   return position;
-// }
-//
-// console.log( findPosition([5, 2, 7, 7, 7, 1, 6], 7) );
+function findPosition(array, target) {
+  var position = -1;
+  for (var i = 0; i <array.length; i++) {
+    if (array[i] == target) {
+        position = i;
+        break
+    }
+  }
+  return position;
+}
+
+console.log( findPosition([5, 2, 7, 7, 7, 1, 6], 7) );
