@@ -46,6 +46,10 @@ h3 {
   margin: 0 auto;
 }
 
+#secondContent {
+	display: none;
+}
+
 /* =================================
   Base Layout Styles
 ==================================== */
