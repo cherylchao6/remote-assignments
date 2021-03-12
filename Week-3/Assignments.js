@@ -25,13 +25,6 @@ app.get('/getdata', (req, res) => {
   res.send(`${result}`);
 });
 
-//Assignment-3
-app.post('/sum.html', (req, res) => {
-  res.cookie('usernumber', req.body.username);
-  console.log(req.body);
-});
-
-
 
 //Assignment-4
 app.get('/myName', (req, res) => {
