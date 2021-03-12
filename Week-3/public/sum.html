@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>孤獨的總和</title>
+</head>
+
+<body>
+  <div id="number">
+    <form action="/sum.html" method="post"></form>
+    <label>Please enter a number</label>
+    <input type="number" name="number">
+    <button id="button" onclick='sendAJAX()'>Give me the sum!</button>
+  </div>
+  <div id="sum">
+
+  </div>
+
+  <script>
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        document.getElementById("sum").innerHTML = xhr.responseText
+      };
+    };
+    xhr.open('POST', '/getData');
+    function sendAJAX() {
+      xhr.send();
+      document.getElementById("button").style.display = "none";
+    }
+  </script>
+</body>
+
+</html>
