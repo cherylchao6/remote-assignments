@@ -6,28 +6,33 @@
 </head>
 
 <body>
-  <div id="number">
-    <form action="/sum.html" method="post"></form>
-    <label>Please enter a number</label>
-    <input type="number" name="number">
-    <button id="button" onclick='sendAJAX()'>Give me the sum!</button>
+  <div id="numberInput">
+    <form action="/sum.html" method="post">
+      <label>Please enter a number</label>
+      <input type="number" name="number" id="number1">
+      <input type="button" value="Give me the sum!" id="button" onclick='sendAJAX()'>
+    </form>
   </div>
+
   <div id="sum">
 
   </div>
 
   <script>
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        document.getElementById("sum").innerHTML = xhr.responseText
-      };
-    };
-    xhr.open('POST', '/getData');
     function sendAJAX() {
+      var xhr = new XMLHttpRequest();
+      var input = document.getElementById("number1").value;
+      console.log(input)
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          document.getElementById("sum").innerHTML = xhr.responseText
+        };
+      };
+      xhr.open('GET', `/getData?number=${input}`);
       xhr.send();
       document.getElementById("button").style.display = "none";
     }
+
   </script>
 </body>
 

@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static('public'))
 app.set('view engine', 'pug');
@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 });
 
 //Assignment-2
-app.get('/getData', (req, res) => {
+app.get('/getdata', (req, res) => {
   var result;
   if (!req.query.number) {
     result = "Lack of Parameter"
@@ -26,9 +26,11 @@ app.get('/getData', (req, res) => {
 });
 
 //Assignment-3
-app.post('/getData', (req, res) => {
+app.post('/sum.html', (req, res) => {
+  res.cookie('usernumber', req.body.username);
   console.log(req.body);
 });
+
 
 
 //Assignment-4
