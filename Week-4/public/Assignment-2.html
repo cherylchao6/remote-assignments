@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Assignment-2</title>
+</head>
+
+<html>
+
+<body>
+  <h1>史上最潮3C大特價</h1>
+  <div id="datadiv">
+  </div>
+  <script>
+    function ajax(src, callback) {
+      var Httpreq = new XMLHttpRequest(); // a new request
+      Httpreq.open("GET", src);
+      Httpreq.onload = () => {
+        callback(Httpreq.responseText)
+      }
+      Httpreq.send()
+    }
+
+    function render(response) {
+      console.log(response);
+      const data = JSON.parse(response);
+      var datapresent = document.getElementById("datadiv");
+      for (var i = 0; i < data.length; i++) {
+        var productName = document.createElement('h2');
+        var productPrice = document.createElement('p');
+        var productDescription = document.createElement('p');
+        productName.textContent = data[i].name;
+        productPrice.textContent = 'Price: ' + data[i].price;
+        productDescription.textContent = 'Description: ' + data[i].description;
+        datapresent.appendChild(productName);
+        datapresent.appendChild(productPrice);
+        datapresent.appendChild(productDescription);
+      }
+    }
+
+    ajax("http://13.113.12.180:4000/api/1.0/remote-w4-data", render);
+
+  </script>
+</body>
+
+</html>
+
+</html>
